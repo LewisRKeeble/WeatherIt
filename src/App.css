@@ -1,38 +1,149 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  height: 100vh;
+  width: 100%;
+  background-color: #0f1035;
   display: flex;
   flex-direction: column;
+}
+
+/* Weather it title */
+.main-title {
+  text-align: center;
+  font-size: 3rem;
+  padding: 10px;
+  background-clip: text;
+  background: linear-gradient(to right, #38d8d0, white);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* Input search for city */
+.input-container {
+  display: flex;
+  background-color: white;
+  border-radius: 30px;
   align-items: center;
+  justify-content: end;
+  width: 270px;
+  margin: 0 auto 0 auto;
+}
+.main-input {
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  letter-spacing: 0.8px;
+  font-size: 13.4px;
+}
+.button {
+  margin-right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*Display info from API */
+.data-title {
+  text-align: center;
+  padding: 10px;
+  background-clip: text;
+  background: linear-gradient(to right, #38d8d0, white);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.data-img-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 15px 0 0 0;
+}
+.data-img {
+  height: 64px;
+  width: 64px;
+}
+.highlow-temp {
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+}
+.data-temp {
+  font-size: 3rem;
+  font-weight: bold;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.data-condition {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: auto;
+  width: 300px;
+  text-align: center;
+  margin: 3rem auto 0 auto;
+}
+.data-astro p {
+  color: white;
+  font-size: 1.3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.data-astro svg {
+  font-size: 1.6rem;
+}
+.dailyweather-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  margin: 0 10%;
+}
+.daily-card h1 {
+  font-size: 1.4rem;
+  background-clip: text;
+  background: linear-gradient(to right, #38d8d0, white);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  padding: 1rem 0 0 0;
+  font-weight: 500;
+}
+
+.daily-highlow {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.daily-title {
+  background-clip: text;
+  background: linear-gradient(to right, #38d8d0, white);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  text-align: center;
+  margin: 10rem 0 1rem 0;
+}
+
+.error-tag{
+  color: white;
+  text-align: center;
+  padding: 5rem;
 }
